@@ -1,0 +1,735 @@
+﻿<!DOCTYPE html>
+<html lang="pl" class="no-js">
+
+<head>
+    <title>pemiz.com - Front-End Developer</title>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Cześć, nazywam się Paweł. Jestem aspirującym Front-End Developerem, mieszkam w Warszawie.">
+    <meta name="author" content="cebula">
+    <meta name="keywords" content="front-end developer, freelancer, html, css, javascript, developer, designer" />
+
+	
+	<!-- Facebook -->
+	<meta property="og:title" content="pemiz.com - Front-End Developer" />
+    <meta property="og:description" content="Cześć, nazywam się Paweł. Jestem aspirującym Front-End Developerem, mieszkam w Warszawie."/>
+    <meta property="og:type" content="Website"/>
+    <meta property="og:url" content="http://www.pemiz.com/" />
+    <meta property="og:image" content="http://pemiz.com/img/portfolio3.png" />
+	
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css' media="none" onload="if(media!='all')media='all'">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css' media="none" onload="if(media!='all')media='all'">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+	
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <h1 class="sr-only">Portfolio page</h1>
+
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <!-- Fixed navbar -->
+    <nav id="header" class="navbar navbar-fixed-top">
+        <h2 class="sr-only">Page navigation</h2>
+
+        <div id="header-container" class="container navbar-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <a id="brand" class="navbar-brand" href="#">Pemiz.com</a>
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="menu-color-font fromLeft" href="#aboutme">O mnie</a></li>
+                    <li><a class="menu-color-font fromLeft" href="#works">Prace</a></li>
+                    <li><a class="menu-color-font fromLeft" href="#skill">Skill</a></li>
+                    <li><a class="menu-color-font fromLeft" href="#contactme">Kontakt</a></li>
+                </ul>
+            </div>
+            <!-- /.nav-collapse -->
+
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+
+    <section id="hero" class="hero text-center">
+        <div class="slideshow">
+            <div class="slideshow-image" style="background-image: url('img/mountain-bg-2.jpg') "></div>
+            <div class="slideshow-image" style="background-image: url('img/mountain-bg-4.jpg')"></div>
+            <div class="slideshow-image" style="background-image: url('img/mountain-bg-3.jpg')"></div>
+            <div class="slideshow-image" style="background-image: url('img/mountain-bg-1.jpg')"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="z-index:10;">
+                    <div class="hero-text">
+                        <h3><span>Front-End</span> <span class = "typing"></span>
+						<span>with
+
+<svg id = "heart" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+     viewBox="0 0 50 50">
+  <path
+        fill="#DC3522"
+        d="M 25.00,5.22
+           C 27.81,5.22 37.81,-0.63 45.79,6.53
+             48.77,9.21 49.75,12.10 49.96,16.00
+             50.52,26.88 44.12,30.89 37.00,38.00
+             34.55,40.45 30.24,45.18 27.00,46.22
+             21.59,47.95 16.40,41.39 13.00,38.00
+             9.70,34.71 3.43,28.95 1.45,25.00
+             -2.73,16.64 0.75,7.45 9.00,3.70
+             18.82,1.48 20.70,5.22 25.00,5.22 Z" />
+</svg>
+					</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutme">
+        <div class="container-fluid">
+            <div class="row release-container">
+                <div class="col-xs-6 col-sm-6 col-md-6 about stuck release">
+                    <div class="roundedCenter hidden-xs">
+                        <img src="img/avatar.svg" style="border-radius:50%;" class="imgAvatar img-responsive" alt="image avatar" />
+                    </div>
+
+                    <div class="left-div text-center">
+                        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                            <path id="Zaznaczenie" fill="none" stroke="black" stroke-width="1" d="M 55.00,48.42
+           C 76.21,51.88 76.03,77.57 76.00,94.00
+             75.97,112.52 67.74,138.09 56.84,153.00
+             49.47,163.09 40.01,170.53 27.00,169.96
+             11.35,169.28 3.15,156.30 1.15,142.00
+             1.15,142.00 1.15,124.00 1.15,124.00
+             1.08,117.48 2.55,111.29 4.13,105.00
+             9.52,83.54 22.95,54.86 46.00,48.42
+             49.15,48.02 51.82,47.79 55.00,48.42 Z
+           M 28.69,77.00
+           C 17.95,93.89 11.77,117.05 12.00,137.00
+             12.14,148.18 17.07,162.74 31.00,160.79
+             40.25,159.49 47.27,149.64 51.36,142.00
+             61.39,123.25 65.24,103.07 65.00,82.00
+             64.88,71.90 61.45,58.60 49.00,59.34
+             39.12,61.71 33.88,68.84 28.69,77.00 Z" />
+
+                            <path id="Zaznaczenie1" fill="none" stroke="black" stroke-width="1" d="M 116.00,114.00
+           C 116.86,111.39 119.42,103.29 121.07,101.58
+             123.61,98.94 132.25,100.64 130.00,111.00
+             133.44,107.84 140.49,101.38 145.00,100.43
+             149.81,99.42 155.08,102.94 155.23,108.00
+             155.28,109.77 154.57,111.38 154.00,113.00
+             156.91,110.15 161.04,105.93 165.00,104.71
+             170.23,103.11 176.43,107.41 176.02,113.00
+             175.58,118.77 166.97,133.19 166.00,144.00
+             166.00,144.00 174.00,137.00 174.00,137.00
+             174.00,140.46 174.48,144.97 172.40,147.89
+             168.86,152.87 160.99,153.84 157.57,146.98
+             153.90,139.62 157.92,129.67 159.00,122.00
+             153.01,126.54 148.61,131.45 144.88,138.00
+             140.05,146.47 142.15,151.95 131.00,153.00
+             131.00,135.09 134.48,133.43 138.00,118.00
+             131.26,123.10 125.34,129.50 121.32,137.00
+             115.27,148.30 119.42,151.70 110.00,152.00
+             107.71,139.21 112.00,126.10 116.00,114.00 Z
+           M 138.00,117.00
+           C 138.00,117.00 139.00,118.00 139.00,118.00
+             139.00,118.00 139.00,117.00 139.00,117.00
+             139.00,117.00 138.00,117.00 138.00,117.00 Z
+           M 159.00,121.00
+           C 159.00,121.00 160.00,122.00 160.00,122.00
+             160.00,122.00 160.00,121.00 160.00,121.00
+             160.00,121.00 159.00,121.00 159.00,121.00 Z" />
+
+                            <path id="Zaznaczenie2" fill="none" stroke="black" stroke-width="1" d="M 183.10,146.98
+           C 182.21,149.43 180.52,152.59 177.30,151.34
+             173.99,150.07 173.88,141.98 174.04,139.00
+             174.33,133.91 176.01,132.54 177.54,128.00
+             177.54,128.00 182.69,111.00 182.69,111.00
+             183.40,109.01 185.51,102.89 186.84,101.61
+             190.06,98.51 195.16,102.61 196.08,106.02
+             196.70,108.32 195.68,110.82 195.00,113.00
+             197.24,110.95 199.47,108.93 202.00,107.22
+             211.74,100.65 219.01,106.40 218.76,113.00
+             218.55,118.60 210.81,131.17 209.00,144.00
+             209.00,144.00 220.00,132.00 220.00,132.00
+             220.00,135.95 220.49,140.44 218.57,144.00
+             215.11,150.42 206.10,156.00 201.09,147.94
+             196.58,140.70 200.78,127.60 203.00,120.00
+             190.29,129.04 188.25,132.83 183.10,146.98 Z
+           M 194.00,113.00
+           C 194.00,113.00 195.00,114.00 195.00,114.00
+             195.00,114.00 195.00,113.00 195.00,113.00
+             195.00,113.00 194.00,113.00 194.00,113.00 Z" />
+
+                            <path id="Zaznaczenie3" fill="none" stroke="black" stroke-width="1" d="M 245.81,94.09
+           C 248.23,98.09 246.70,103.89 242.00,105.00
+             242.81,115.78 231.32,130.03 231.00,144.00
+             231.00,144.00 243.00,129.00 243.00,129.00
+             243.00,137.64 243.60,141.28 236.91,147.94
+             232.12,152.71 225.18,154.00 221.80,146.96
+             216.53,135.97 223.28,122.31 227.40,112.00
+             228.49,109.29 230.81,102.41 233.39,101.13
+             236.51,99.58 239.90,103.15 242.00,105.00
+             239.23,101.26 238.52,100.33 234.00,99.00
+             234.00,99.00 237.00,89.00 237.00,89.00
+             240.93,89.55 243.61,90.46 245.81,94.09 Z" />
+
+                            <path id="Zaznaczenie4" fill="none" stroke="black" stroke-width="1" d="M 284.97,133.00
+           C 281.75,137.72 278.52,141.91 274.00,145.48
+             269.35,149.16 265.03,151.70 259.00,151.96
+             234.65,153.02 243.14,118.62 252.53,107.04
+             256.62,101.99 264.42,98.04 270.91,100.74
+             276.74,103.16 278.13,111.46 277.40,117.00
+             276.22,125.80 271.97,134.34 264.00,138.91
+             264.00,138.91 256.00,142.00 256.00,142.00
+             258.46,142.59 260.44,143.14 263.00,142.57
+             269.98,141.01 278.91,129.96 282.54,124.00
+             285.91,118.47 285.91,114.18 293.00,113.00
+             292.61,120.93 289.37,126.55 284.97,133.00 Z
+           M 255.00,133.00
+           C 265.61,130.74 267.97,121.47 268.00,112.00
+             259.56,114.50 255.74,124.89 255.00,133.00 Z" />
+
+                            <path id="Zaznaczenie5" fill="none" stroke="black" stroke-width="1" d="M 297.60,168.39
+           C 299.83,173.05 289.50,173.59 287.00,173.83
+             287.00,173.83 267.00,175.17 267.00,175.17
+             267.00,175.17 246.00,176.99 246.00,176.99
+             246.00,176.99 223.00,178.83 223.00,178.83
+             223.00,178.83 184.00,181.91 184.00,181.91
+             184.00,181.91 70.00,190.83 70.00,190.83
+             70.00,190.83 37.00,193.09 37.00,193.09
+             37.00,193.09 16.00,194.99 16.00,194.99
+             12.95,195.07 -2.08,198.18 0.66,191.30
+             2.08,187.71 13.59,188.15 17.00,187.91
+             17.00,187.91 49.00,185.09 49.00,185.09
+             49.00,185.09 69.00,183.83 69.00,183.83
+             69.00,183.83 145.00,177.91 145.00,177.91
+             145.00,177.91 215.00,172.09 215.00,172.09
+             215.00,172.09 266.00,168.17 266.00,168.17
+             266.00,168.17 289.00,166.42 289.00,166.42
+             291.52,166.14 296.22,165.51 297.60,168.39 Z" />
+                        </svg>
+                        <div id = "rev3" class = "rev-3"><h2 class="h2"> PAWEŁ / WARSZAWA / FITNESS</h2></div>
+
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 work over-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec finibus urna. Praesent dapibus mauris at euismod aliquet. Nullam volutpat molestie metus, id vehicula nunc semper nec. In hac habitasse platea dictumst. Nullam metus tortor, blandit a nisi quis, tempus vestibulum massa. Etiam id dignissim risus. Morbi vitae libero justo. Morbi faucibus tincidunt finibus. Vestibulum malesuada fermentum purus sit amet tristique. Vestibulum tristique magna at dui molestie, eu sollicitudin leo venenatis. In sed velit convallis, eleifend dui eget, vehicula orci. Aenean vitae egestas libero. Maecenas porttitor dui quis arcu fermentum, vel vehicula est accumsan. Sed iaculis erat nec pellentesque mattis. Ut eu sodales erat. Fusce et ipsum arcu. Morbi porta purus a ultricies convallis. Aliquam imperdiet hendrerit lectus. Aliquam tempus elit at massa sollicitudin lacinia. Phasellus consectetur cursus turpis, at congue eros tempus eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis felis et purus venenatis, et mollis augue iaculis. Pellentesque id est sed enim euismod finibus et sit amet nibh. In viverra suscipit sapien, in ornare turpis. Morbi aliquam tellus in nunc posuere, ac hendrerit sapien dapibus. Vestibulum semper vehicula nisi, vitae congue leo pulvinar eget. Pellentesque non pretium nisi, vitae suscipit sapien. In hac habitasse platea dictumst. Aenean lorem magna, fringilla eget maximus vel, laoreet ut risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam nec sem nibh. Maecenas in dolor at purus posuere finibus sed sollicitudin tellus. Fusce elementum mi quis sagittis volutpat. Donec mattis justo id erat varius, vel hendrerit nisi ullamcorper. Suspendisse convallis enim ut metus molestie rhoncus. Nulla eget ante ligula. Donec vulputate a eros quis ornare. Praesent efficitur leo ut ex tincidunt sagittis. Integer ac metus urna. Praesent non mi quis orci vestibulum cursus ut quis nulla. Integer posuere tortor condimentum lacus pulvinar mattis. Mauris tempor sed ligula et ullamcorper. Proin diam purus, ullamcorper non ultrices tincidunt, lobortis sed enim. Donec faucibus sodales nulla, in placerat risus consequat ac. Nulla ex enim, tempus a blandit eu, vestibulum sodales urna. Sed et nulla ultricies, commodo nulla quis, blandit lacus. Nullam dictum tellus eget fermentum molestie. Nullam scelerisque velit urna, vitae pellentesque tellus pharetra eget. Donec blandit risus tortor, ac laoreet mauris eleifend vitae. Cras et aliquet arcu. Proin blandit egestas est in rhoncus. Mauris aliquam enim eget luctus pulvinar. In pharetra eros eget arcu pellentesque, et vestibulum massa elementum. Fusce nec molestie neque. Morbi et tellus non ex luctus tincidunt vel quis lorem. Etiam eleifend porttitor elit eu suscipit. Morbi laoreet nisl at eleifend hendrerit. Aliquam in nisl libero. Aliquam condimentum ligula nec egestas mattis. Integer egestas, erat vel suscipit congue, justo massa hendrerit nisl, vel tempus nisi mauris vel ante. Cras quis orci auctor, luctus tellus vel, interdum enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse interdum malesuada quam, sed blandit sem placerat ut. Maecenas iaculis nulla odio, dignissim luctus risus eleifend id. Curabitur consequat lorem erat, ac mollis nulla bibendum ac. Sed aliquet malesuada nisi, ac ultrices mi tincidunt ac. Aliquam turpis felis, congue eu sodales eu, imperdiet in elit. Donec quis lacus congue, consequat sapien eget, venenatis nisl. In porta finibus pretium. Sed consequat leo vitae tristique porta. Morbi vel elementum ligula. Cras eget nibh in dui aliquam sodales. Vivamus eget est mattis, finibus est vitae, egestas tellus. Vivamus lectus tellus, ornare eleifend laoreet id, sagittis nec enim. Aenean tincidunt, arcu a volutpat pulvinar, lorem nulla fermentum sapien, at lacinia ipsum magna sit amet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec finibus urna. Praesent dapibus mauris at euismod aliquet. Nullam volutpat molestie metus, id vehicula nunc semper nec. In hac habitasse platea dictumst. Nullam metus tortor, blandit a nisi quis, tempus vestibulum massa. Etiam id dignissim risus. Morbi vitae libero justo. Morbi faucibus tincidunt finibus. Vestibulum malesuada fermentum purus sit amet tristique. Vestibulum tristique magna at dui molestie, eu sollicitudin leo venenatis. In sed velit convallis, eleifend dui eget, vehicula orci. Aenean vitae egestas libero. Maecenas porttitor dui quis arcu fermentum, vel vehicula est accumsan. Sed iaculis erat nec pellentesque mattis. Ut eu sodales erat. orbi vel elementum ligula. Cras eget nibh in dui aliquam sodales. Vivamus eget est mattis, finibus est vitae, egestas tellus. Vivamus lectus tellus, ornare eleifend laoreet id, sagittis nec enim. Aenean tincidunt, arcu a volutpat pulvinar, lorem nulla fermentum sapien, at lacinia ipsum magna sit amet mi.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-480px"></div>
+    </section>
+
+    <section id="works">
+        <div class="container-fluid">
+            <div class="row release-container">
+                <div class="col-xs-6 col-sm-6 col-md-6 about2 stuck release">
+                    <div class="expand">
+					<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+						<div class = "page-info over-text">
+						</div>
+							<div class = "page-technology-used">
+							</div>
+								<div class = "page-info-content over-text">
+								</div>
+									<div class = "page-info-share over-text">
+									</div>
+								
+					</div>
+                    <div class="left-div text-center">
+                        <svg id="logo2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                            <path id="Zaznaczenie6" fill="none" stroke="black" stroke-width="1" d="M 40.64,164.00
+           C 38.76,166.79 35.69,171.20 32.01,171.46
+             28.32,171.72 25.83,167.84 24.38,165.00
+             20.94,158.28 20.01,150.44 20.00,143.00
+             19.97,124.95 20.02,117.52 26.00,100.00
+             29.29,90.38 34.68,79.73 41.30,72.00
+             41.30,72.00 52.69,60.58 52.69,60.58
+             55.43,57.46 54.95,55.46 56.73,53.30
+             60.32,48.94 65.80,50.41 70.42,50.90
+             75.03,51.38 84.45,47.20 95.00,53.97
+             117.06,68.11 110.22,106.58 93.71,122.56
+             81.60,134.29 68.95,136.00 53.00,136.00
+             51.73,144.09 45.26,157.18 40.64,164.00 Z
+           M 67.00,124.84
+           C 81.59,122.13 91.19,109.58 94.84,96.00
+             98.13,83.78 96.20,63.89 80.00,63.04
+             76.85,62.88 72.06,62.91 69.85,65.51
+             67.99,67.70 67.98,72.17 67.58,75.00
+             67.58,75.00 63.65,98.00 63.65,98.00
+             63.65,98.00 57.00,124.84 57.00,124.84
+             57.00,124.84 67.00,124.84 67.00,124.84 Z
+           M 29.00,137.00
+           C 29.00,137.00 29.00,145.00 29.00,145.00
+             29.02,150.04 29.19,155.68 32.00,160.00
+             41.39,138.19 46.62,121.52 50.57,98.00
+             50.57,98.00 54.00,75.00 54.00,75.00
+             37.46,86.88 29.03,117.30 29.00,137.00 Z" />
+
+                            <path id="Zaznaczenie7" fill="none" stroke="black" stroke-width="1" d="M 134.17,103.07
+           C 138.43,101.00 144.08,105.61 143.73,111.00
+             143.56,113.60 140.52,120.12 139.42,123.00
+             136.55,130.54 133.60,138.07 132.00,146.00
+             132.00,146.00 145.00,131.00 145.00,131.00
+             145.00,139.91 145.26,144.28 137.91,150.77
+             134.07,154.17 128.46,155.44 125.00,150.77
+             119.73,143.67 123.44,132.77 125.00,125.00
+             122.63,125.77 120.51,126.53 118.00,126.80
+             116.60,126.98 114.38,127.02 113.00,126.80
+             100.19,124.48 109.08,110.02 113.00,104.00
+             118.57,105.90 121.04,108.09 122.00,114.00
+             122.00,114.00 134.17,103.07 134.17,103.07 Z
+           M 121.00,114.00
+           C 121.00,114.00 122.00,115.00 122.00,115.00
+             122.00,115.00 122.00,114.00 122.00,114.00
+             122.00,114.00 121.00,114.00 121.00,114.00 Z
+           M 120.00,115.00
+           C 120.00,115.00 121.00,116.00 121.00,116.00
+             121.00,116.00 121.00,115.00 121.00,115.00
+             121.00,115.00 120.00,115.00 120.00,115.00 Z" />
+
+                            <path id="Zaznaczenie8" fill="none" stroke="black" stroke-width="1" d="M 161.00,153.85
+           C 151.59,157.40 146.88,148.86 145.46,141.00
+             143.78,131.66 148.47,116.34 154.39,109.02
+             158.60,103.80 166.49,99.36 172.90,103.74
+             175.20,105.31 176.55,107.70 178.00,110.00
+             181.20,102.06 188.92,109.35 188.57,115.00
+             188.39,117.82 185.49,124.18 184.28,127.00
+             181.40,133.69 179.45,138.81 178.00,146.00
+             184.61,142.59 186.15,136.32 191.00,131.00
+             191.00,139.15 192.05,142.54 185.91,148.98
+             180.55,154.60 173.22,156.90 170.00,148.00
+             167.24,149.90 164.03,152.71 161.00,153.85 Z
+           M 156.76,136.00
+           C 156.59,139.12 157.19,145.62 162.00,143.83
+             168.37,141.46 174.48,122.87 170.98,117.16
+             169.84,115.31 169.51,115.71 167.95,115.03
+             160.09,116.52 157.14,128.99 156.76,136.00 Z" />
+
+                            <path id="Zaznaczenie9" fill="none" stroke="black" stroke-width="1" d="M 225.40,142.99
+           C 220.58,150.43 205.55,157.93 197.33,151.99
+             192.88,148.78 191.15,142.20 191.14,137.00
+             190.97,135.21 190.95,131.67 191.14,130.00
+             191.79,127.29 193.01,125.46 194.10,123.00
+             197.31,115.78 198.20,110.78 205.01,105.39
+             213.85,98.40 224.10,102.53 224.90,114.00
+             225.54,123.04 223.40,127.76 214.00,128.00
+             214.87,121.48 215.85,120.65 214.00,114.00
+             208.06,120.10 203.64,127.23 203.10,136.00
+             202.84,140.10 203.95,144.71 209.00,144.63
+             215.11,144.54 222.56,134.87 227.00,131.00
+             227.00,134.85 227.55,139.67 225.40,142.99 Z" />
+
+                            <path id="Zaznaczenie10" fill="none" stroke="black" stroke-width="1" d="M 268.97,135.00
+           C 265.75,139.72 262.52,143.91 258.00,147.48
+             253.35,151.16 249.03,153.70 243.00,153.96
+             229.16,154.56 225.14,141.75 227.24,130.17
+             228.12,125.28 233.40,112.90 236.53,109.04
+             240.62,103.99 248.42,100.04 254.91,102.74
+             260.74,105.16 262.13,113.46 261.40,119.00
+             260.22,127.80 255.97,136.34 248.00,140.91
+             248.00,140.91 240.00,144.00 240.00,144.00
+             242.46,144.59 244.44,145.14 247.00,144.57
+             253.98,143.01 262.91,131.96 266.54,126.00
+             269.91,120.47 269.91,116.18 277.00,115.00
+             276.61,122.93 273.37,128.55 268.97,135.00 Z
+           M 239.00,135.00
+           C 249.61,132.74 251.97,123.47 252.00,114.00
+             243.56,116.50 239.74,126.89 239.00,135.00 Z" />
+
+                            <path id="Zaznaczenie11" fill="none" stroke="black" stroke-width="1" d="M 297.60,168.39
+           C 299.83,173.05 289.50,173.59 287.00,173.83
+             287.00,173.83 267.00,175.17 267.00,175.17
+             267.00,175.17 246.00,176.99 246.00,176.99
+             246.00,176.99 223.00,178.83 223.00,178.83
+             223.00,178.83 184.00,181.91 184.00,181.91
+             184.00,181.91 70.00,190.83 70.00,190.83
+             70.00,190.83 37.00,193.09 37.00,193.09
+             37.00,193.09 16.00,194.99 16.00,194.99
+             12.95,195.07 -2.08,198.18 0.66,191.30
+             2.08,187.71 13.59,188.15 17.00,187.91
+             17.00,187.91 49.00,185.09 49.00,185.09
+             49.00,185.09 69.00,183.83 69.00,183.83
+             69.00,183.83 145.00,177.91 145.00,177.91
+             145.00,177.91 215.00,172.09 215.00,172.09
+             215.00,172.09 266.00,168.17 266.00,168.17
+             266.00,168.17 289.00,166.42 289.00,166.42
+             291.52,166.14 296.22,165.51 297.60,168.39 Z" />
+                        </svg>
+
+                        <div id = "rev4" class = "rev-4"><h2 class="h2"> PORTFOLIO / FITNESS / COMINGSOON </h2></div>
+
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 work2 over-text" style="padding-left:0px; padding-right:0px;">
+                    <div class="view view-sixth">
+                        <img class="tab-fade-0 img-responsive" src="img/tablet0.png" alt="presentation of site" />
+                        <div class="mask">
+                            <h3>Portfolio Page</h3>
+                            <p>Moje prywatne portfolio, jednocześnie pierwszy projekt tworzony na wcześniej przygotowanym koncepcie.</p>
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters"><defs><filter id="filter-goo-2"><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" /><feComposite in="SourceGraphic" in2="goo" /></filter></defs></svg><button id = "btn-1" class="button button--2 portfolio-click" style="filter: url('#filter-goo-2')">Szczegoly<span class="button__bg"></span></button>
+                        </div>
+                    </div>
+
+                    <div class="view view-sixth">
+                        <img class="tab-fade-1 img-responsive" src="img/tablet1.png" alt="presentation of site" />
+                        <div class="mask2">
+                            <h3>Fitness Page</h3>
+                            <p>Strona powstała w związku z moją nauką bootstrapa, był to mój pierwszy kontakt z tą biblioteką.</p>
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters"><defs><filter id="filter-goo-2"><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" /><feComposite in="SourceGraphic" in2="goo" /></filter></defs></svg><button id = "btn-2" class="button button--2 fitness-click" style="filter: url('#filter-goo-2')">Szczegoly<span class="button__bg"></span></button>
+                        </div>
+                    </div>
+
+                    <div class="view view-sixth">
+                        <img class="tab-fade-2 img-responsive" src="img/tablet2.png" alt="presentation of site" />
+                        <div class="mask3">
+                            <h3>Coming Soon</h3>
+                            <p>Cras quis orci auctor, luctus tellus vel, interdum enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters"><defs><filter id="filter-goo-2"><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" /><feComposite in="SourceGraphic" in2="goo" /></filter></defs></svg><button id = "btn-3" class="button button--2 coming-click" style="filter: url('#filter-goo-2')">Szczegoly<span class="button__bg"></span></button>
+
+                        </div>
+                    </div>
+
+                    <div class="view view-sixth">
+                        <img class="tab-fade-2 img-responsive" src="img/tablet2.png" alt="presentation of site" />
+                        <div class="mask3">
+                            <h3>Coming Soon</h3>
+                            <p>Cras quis orci auctor, luctus tellus vel, interdum enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters"><defs><filter id="filter-goo-2"><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" /><feComposite in="SourceGraphic" in2="goo" /></filter></defs></svg><button id = "btn-3" class="button button--2 coming-click" style="filter: url('#filter-goo-2')">Szczegoly<span class="button__bg"></span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mobile-480px-works">
+            <img class="tab-fade-0 img-responsive" src="img/tablet0.png" alt="presentation of site" />
+            <img class="tab-fade-1 img-responsive" src="img/tablet1.png" alt="presentation of site" />
+            <img class="tab-fade-2 img-responsive" src="img/tablet2.png" alt="presentation of site" />
+        </div>
+    </section>
+
+    <section id="skill">
+        <div class="container-fluid">
+            <div class="row release-container">
+                <div class="col-xs-6 col-sm-6 col-md-6 about stuck release">
+                    <svg id="hexagon" class="hidden-xs shadow" viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="drop-shadow">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" />
+                                <feOffset dx="2" dy="8" result="offsetblur" />
+                                <feFlood flood-color="rgba(0,0,0,0.3)" />
+                                <feComposite in2="offsetblur" operator="in" />
+                                <feMerge>
+                                    <feMergeNode/>
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+                                <image id="ironman" xlink:href="img/lamp.svg" x="-25" width="150" height="100" />
+                            </pattern>
+                        </defs>
+                        <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" />
+                    </svg>
+
+                    <div class="left-div text-center">
+
+                        <svg id="logo3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                            <path id="Zaznaczenie12" fill="none" stroke="black" stroke-width="1" d="M 60.65,163.00
+           C 64.86,176.42 77.94,172.15 86.00,165.53
+             97.13,156.40 107.90,135.50 108.91,121.00
+             109.12,118.05 109.08,113.81 108.20,111.00
+             102.95,94.28 84.40,102.43 75.00,109.68
+             72.50,111.61 67.63,117.22 64.33,115.83
+             60.80,114.35 58.25,106.58 58.78,103.00
+             59.43,98.60 63.20,92.67 65.67,89.00
+             74.49,75.94 88.72,65.19 105.00,65.00
+             112.99,64.91 119.69,65.58 125.96,71.21
+             136.45,80.64 134.71,94.70 122.00,101.00
+             122.52,97.15 123.77,92.82 122.98,89.00
+             120.75,78.12 109.07,73.20 99.00,75.93
+             87.72,78.98 78.67,88.13 73.00,98.01
+             85.58,89.65 104.36,83.08 115.37,98.01
+             116.88,100.07 118.60,103.58 119.45,106.00
+             121.17,110.87 121.06,114.95 121.00,120.00
+             120.73,143.12 100.82,177.17 76.00,179.83
+             55.87,181.99 47.79,169.35 48.00,151.00
+             48.07,145.60 50.22,132.32 54.64,128.95
+             57.56,126.72 65.33,127.00 69.00,127.00
+             65.80,138.22 56.74,150.54 60.65,163.00 Z
+           M 72.00,98.00
+           C 72.00,98.00 73.00,99.00 73.00,99.00
+             73.00,99.00 73.00,98.00 73.00,98.00
+             73.00,98.00 72.00,98.00 72.00,98.00 Z
+           M 71.00,99.00
+           C 71.00,99.00 72.00,100.00 72.00,100.00
+             72.00,100.00 72.00,99.00 72.00,99.00
+             72.00,99.00 71.00,99.00 71.00,99.00 Z" />
+
+                            <path id="Zaznaczenie13" fill="none" stroke="black" stroke-width="1" d="M 132.15,156.00
+           C 131.41,158.62 130.33,163.95 126.30,162.34
+             123.01,161.04 123.99,152.04 124.00,149.00
+             124.07,134.19 131.84,109.08 137.19,95.00
+             138.49,91.58 142.13,79.76 146.21,79.57
+             150.56,79.37 154.50,84.88 153.89,89.00
+             153.57,91.11 150.19,98.57 149.15,101.00
+             149.15,101.00 140.00,124.00 140.00,124.00
+             142.87,121.37 145.74,118.90 149.00,116.76
+             153.79,113.62 159.09,111.39 163.72,116.23
+             165.66,118.25 166.31,120.24 166.20,123.00
+             165.78,132.91 157.47,146.77 148.00,150.00
+             155.88,160.01 159.97,148.09 168.00,140.00
+             168.00,147.72 168.87,149.65 163.56,156.00
+             162.01,157.84 160.04,159.98 158.00,161.26
+             148.91,166.94 138.37,155.43 137.64,151.10
+             137.05,147.55 140.65,146.93 144.99,142.90
+             150.04,138.20 152.36,134.87 153.00,128.00
+             141.70,135.63 135.87,142.85 132.15,156.00 Z" />
+
+                            <path id="Zaznaczenie14" fill="none" stroke="black" stroke-width="1" d="M 185.27,104.82
+           C 186.89,104.45 188.60,105.41 189.89,106.43
+             194.62,110.66 192.54,115.33 189.89,120.00
+             189.89,120.00 188.00,118.00 188.00,118.00
+             189.50,130.14 176.68,143.03 178.00,156.00
+             178.00,156.00 191.00,138.00 191.00,138.00
+             191.00,140.67 191.26,147.53 190.48,149.72
+             188.33,155.79 177.51,167.83 170.65,160.57
+             167.28,157.01 167.94,149.65 168.00,145.00
+             168.10,138.10 169.23,138.07 171.65,132.00
+             174.42,125.06 175.94,116.51 183.00,113.00
+             180.01,110.00 183.15,105.32 185.27,104.82 Z
+           M 186.00,116.00
+           C 186.00,116.00 187.00,117.00 187.00,117.00
+             187.00,117.00 187.00,116.00 187.00,116.00
+             187.00,116.00 186.00,116.00 186.00,116.00 Z
+           M 187.00,117.00
+           C 187.00,117.00 188.00,118.00 188.00,118.00
+             188.00,118.00 188.00,117.00 188.00,117.00
+             188.00,117.00 187.00,117.00 187.00,117.00 Z" />
+
+                            <path id="Zaznaczenie15" fill="none" stroke="black" stroke-width="1" d="M 205.91,158.93
+           C 201.51,163.44 195.44,166.16 191.99,158.93
+             189.80,154.28 190.87,149.81 191.10,145.00
+             191.10,145.00 191.10,138.00 191.10,138.00
+             192.10,131.82 202.14,104.96 205.01,98.00
+             206.27,94.95 211.15,82.38 213.49,81.13
+             215.68,79.96 218.26,81.71 219.77,83.23
+             225.54,88.99 219.53,97.68 217.00,104.00
+             211.99,116.52 200.03,143.78 199.00,156.00
+             199.00,156.00 213.00,137.00 213.00,137.00
+             213.00,147.97 214.29,150.43 205.91,158.93 Z" />
+
+                            <path id="Zaznaczenie16" fill="none" stroke="black" stroke-width="1" d="M 244.16,131.00
+           C 243.11,136.44 232.73,153.67 228.82,157.98
+             224.51,162.73 217.78,166.88 213.99,158.90
+             211.80,154.28 212.87,149.81 213.10,145.00
+             213.10,145.00 213.10,138.00 213.10,138.00
+             214.10,131.82 224.14,104.96 227.01,98.00
+             228.27,94.95 233.15,82.38 235.49,81.13
+             237.68,79.96 240.26,81.71 241.77,83.23
+             247.54,88.99 241.53,97.68 239.00,104.00
+             233.99,116.52 222.03,143.78 221.00,156.00
+             227.25,149.60 229.81,145.75 234.14,138.00
+             237.11,132.69 237.91,128.28 244.16,126.00
+             244.48,128.10 244.82,128.75 244.16,131.00 Z" />
+
+                            <path id="Zaznaczenie17" fill="none" stroke="black" stroke-width="1" d="M 297.60,180.39
+           C 299.83,185.05 289.50,185.59 287.00,185.83
+             287.00,185.83 267.00,187.17 267.00,187.17
+             267.00,187.17 246.00,188.99 246.00,188.99
+             246.00,188.99 223.00,190.83 223.00,190.83
+             223.00,190.83 184.00,193.91 184.00,193.91
+             184.00,193.91 70.00,202.83 70.00,202.83
+             70.00,202.83 37.00,205.09 37.00,205.09
+             37.00,205.09 16.00,206.99 16.00,206.99
+             12.95,207.07 -2.08,210.18 0.66,203.30
+             2.08,199.71 13.59,200.15 17.00,199.91
+             17.00,199.91 49.00,197.09 49.00,197.09
+             49.00,197.09 69.00,195.83 69.00,195.83
+             69.00,195.83 145.00,189.91 145.00,189.91
+             145.00,189.91 215.00,184.09 215.00,184.09
+             215.00,184.09 266.00,180.17 266.00,180.17
+             266.00,180.17 289.00,178.42 289.00,178.42
+             291.52,178.14 296.22,177.51 297.60,180.39 Z" />
+
+                        </svg>
+
+                        <div id = "rev5" class = "rev-5"><h2 class="h2"> HTML5 / CSS3 / JS / AND MORE </h2></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 work3 over-text">
+                    <div class="skill-text">
+                        <p class="text-left about-skill">
+						Technologie które wykorzystywałem w swoich projektach, niektóre znam lepiej, niektórze gorzej. Jeżeli chcesz się dowiedzieć czegoś więcej <strong>kliknij</strong> poszczególną ikonę reprezentującą daną technologie.
+                        </p>
+                    </div>
+                    <div class="svg-icons text-center">
+                        <img class="html5 skills" src="img/html5.svg" alt="html5 logo" /> <img class="css3 skills" src="img/css3.svg" alt="css3 logo" /> <img class="js skills" src="img/js.svg" alt="javascript logo" />
+                        <img class="rwd skills" src="img/rwd.svg" alt="resposive web design logo" /> <img class="sass skills" src="img/sass.svg" alt="sass logo" /> <img class="gimp skills" src="img/gimp.svg" alt="gimp logo" />
+                        <img class="jquery skills" src="img/jquery.svg" alt="jquery logo" /> <img class="mysql skills" src="img/mysql.svg" alt="mysql logo" /> <img class="github skills" src="img/github.svg" alt="github logo" />
+                        <img class="php skills" src="img/php.svg" alt="php logo" /> <img class="bootstrap skills" src="img/bootstrap.svg" alt="bootstrap logo" />
+                    </div>
+					
+					  <p class = "text-center">Akutalnie uczę się:</p>
+					  <div class="svg-icons text-center">
+						<img class="skills" src="img/react.svg" alt="react logo" />
+						<img class="skills" src="img/es6.svg" alt="es6 logo" />
+					  </div>
+					  
+                </div>
+
+            </div>
+        </div>
+        <div class="mobile-480px-skill text-center">
+			<div class="skill-text">
+                        <p class="text-center about-skill">
+						Technologie które wykorzystywałem w swoich projektach, niektóre znam lepiej, niektóre gorzej.
+                        </p>
+                    </div>
+                    <div class="svg-icons text-center">
+                        <img class="html5 skills" src="img/html5.svg" alt="html5 logo" /> <img class="css3 skills" src="img/css3.svg" alt="css3 logo" /> <img class="js skills" src="img/js.svg" alt="javascript logo" />
+                        <img class="rwd skills" src="img/rwd.svg" alt="resposive web design logo" /> <img class="sass skills" src="img/sass.svg" alt="sass logo" /> <img class="gimp skills" src="img/gimp.svg" alt="gimp logo" />
+                        <img class="jquery skills" src="img/jquery.svg" alt="jquery logo" /> <img class="mysql skills" src="img/mysql.svg" alt="mysql logo" /> <img class="github skills" src="img/github.svg" alt="github logo" />
+                        <img class="php skills" src="img/php.svg" alt="php logo" /> <img class="bootstrap skills" src="img/bootstrap.svg" alt="bootstrap logo" />
+                    </div>
+					
+					  <p class = "text-center">Akutalnie uczę się:</p>
+					  <div class="svg-icons text-center">
+						<img class="skills" src="img/react.svg" alt="react logo" />
+						<img class="skills" src="img/es6.svg" alt="es6 logo" />
+					  </div>
+            
+        </div>
+    </section>
+
+    <section id="contactme">
+        <h2 class="sr-only">Footer content</h2>
+        <footer>
+            <div class="contact-form container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-md-push-4 col-sm-12 col-xs-12 text-center">
+                        <div class="footer-center">
+
+                            <div class = "location-contact">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <p>Warszawa, Polska</p>
+                            </div>
+
+                            <div class = "phone-contact">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <p class="protectedNumber" title="507-135-661"></p>
+                            </div>
+
+                            <div class = "email-contact">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <p class = "email-hide"></p>
+                            </div>
+
+							<div class = "github-contact">
+                                <i class="fa fa-github-alt" aria-hidden="true"></i>
+                                <p><a href = "https://github.com/ceboola" target="_blank">ceboola</a></p>
+                            </div>
+							
+                            <div class="footer-center-text">Jeżeli masz jakieś pytania, uwagi, oferty współpracy lub po prostu chcesz zapytać o cokolwiek. Zapraszam do kontaktu poprzez formularz kontaktowy na stronie lub napisz do mnie bezpośrednio na e-maila podanego wyżej.</div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 col-md-pull-4 twitter-container">
+                        <span class="first"> 
+			<i class="fa fa-twitter" aria-hidden="true"></i>twitter
+			</span>
+                        <div id="example1"></div>
+                        <!-- <iframe id = "google-map" width="100%" height="370" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> -->
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12 text-right text-sm-center">
+                        <form class="form-horizontal" method="post" action="contact.php">
+							<div class = "form-text">
+                            <div class="form-group">
+                                <div class="col-xs-12 col-sm-12">
+                                    <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-12 col-sm-12">
+                                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
+                                </div>
+                            </div>
+
+                            <textarea class="form-control" rows="10" id="message" placeholder="MESSAGE" name="message"></textarea>
+							</div>
+                            <!-- <input type="submit" value="WYSLIJ"/> -->
+
+                            <div class="center-component">
+                                <button class="colins-submit">
+                                    <svg id="send-btn" width="336" height="60" viewBox="0 0 336 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+                                        <rect class="btn-shape btn-bg" x="3" y="3" width="330" height="54" rx="6" ry="6" fill="#ffffff" fill-opacity="1" stroke="#ccc" stroke-width="4" />
+                                        <rect class="btn-shape btn-color" x="3" y="3" width="330" height="54" rx="6" ry="6" fill="#ffffff" fill-opacity="0" stroke="rgb(30,205,151)" stroke-width="4" />
+                                        <text class="checkNode" x="166" y="35" font-family="Montserrat" font-size="22" fill-opacity="1" text-anchor="middle" fill="rgb(255,255,255)">
+                                            ✔
+                                        </text>
+                                        <text class="textNode" x="166" y="35" transform="scale(1)" font-family="'Droid', Arial, Helvetica, serif" font-weight="700" font-size="22" fill-opacity="1" text-anchor="middle" fill="rgb(30,205,151)">
+                                            WYŚLIJ
+                                        </text>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div id="form-messages"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-fluid contactFull text-center col-xs-12 col-md-12 col-sm-12">
+                <span class="footer-text">All rights reserved All rights reserved All rights reserved</span>
+            </div>
+        </footer>
+    </section>
+
+    <!-- main js scripts -->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" async></script>
+    <script src="js/jquery.stuck.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/twitterFetcher.js" async defer></script>
+	<script src="js/anime.min.js" async></script>
+	<script src="js/scrollMonitor.js" async></script>
+    <script src="js/scripts.js" async></script>
+
+</body>
+
+</html>
