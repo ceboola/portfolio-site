@@ -170,7 +170,7 @@ sizeHeartnLogo();
 $('.portfolio-click').click(function() {
     $('.expand').fadeOut(500, function() {
         $('.page-info, .page-technology-used, .page-info-content, .page-info-share').empty();
-        $('.left-div').fadeOut();
+        $('#left-div-handler').fadeOut();
         $('.expand').delay(400).fadeIn();
         $('.page-info').html('<p>Wykorzystane technologie:</p>');
         $('.page-technology-used').html('<img class="html5 skills" src="img/html5.svg" alt="html5 logo" /> <img class="css3 skills" src="img/css3.svg" alt="css3 logo" /> <img class="js skills" src="img/js.svg" alt="javascript logo" /> <img class="rwd skills" src="img/rwd.svg" alt="resposive web design logo" /> <img class="php skills" src="img/php.svg" alt="php logo" /> <img class="gimp skills" src="img/gimp.svg" alt="gimp logo" /> ');
@@ -182,7 +182,7 @@ $('.portfolio-click').click(function() {
 $('.fitness-click').click(function() {
     $('.expand').fadeOut(500, function() {
         $('.page-info, .page-technology-used, .page-info-content, .page-info-share').empty();
-        $('.left-div').fadeOut();
+        $('#left-div-handler').fadeOut();
         $('.expand').delay(400).fadeIn();
         $('.page-info').html('<p>Wykorzystane technologie:</p>');
         $('.page-technology-used').html('<img class="html5 skills" src="img/html5.svg" alt="html5 logo" /> <img class="css3 skills" src="img/css3.svg" alt="css3 logo" /> <img class="js skills" src="img/js.svg" alt="javascript logo" /> <img class="rwd skills" src="img/rwd.svg" alt="resposive web design logo" /> <img class="php skills" src="img/php.svg" alt="php logo" /> <img class="gimp skills" src="img/gimp.svg" alt="gimp logo" /> ');
@@ -195,7 +195,7 @@ $('.glyphicon-remove-sign').click(function() {
     $('.expand').fadeOut(500, function() {
         $('.page-info, .page-technology-used, .page-info-content, .page-info-share').empty();
     });
-    $('.left-div').delay(400).fadeIn();
+    $('#left-div-handler').delay(400).fadeIn();
 });
 
 $(document).ready(function() {
