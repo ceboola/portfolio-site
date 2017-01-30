@@ -9,6 +9,22 @@
 // Additionally, you can toggle specific options in the Configure
 // menu.
 
+function pageLoadTop() {
+    $(window).on('unload', function() {
+        $(window).scrollTop(0);
+    });
+}
+pageLoadTop();
+
+function preLoad() {
+$(document).ready(function() {
+    setTimeout(function() {
+        $('body').addClass('loaded');
+    }, 900);
+});
+}
+preLoad();
+
 function removeStickOnMobile() {
     $(window).on('load', function() {
         var width = $(window).width();
@@ -166,7 +182,7 @@ sizeHeartnLogo();
     });
 
 	*/
-
+function portfolioPageButton() {
 $('.portfolio-click').click(function() {
     $('.expand').fadeOut(500, function() {
         $('.page-info, .page-technology-used, .page-info-content, .page-info-share').empty();
@@ -178,7 +194,10 @@ $('.portfolio-click').click(function() {
         $('.page-info-share').html('<p>A</p> <p>B</p>');
     });
 });
+};
+portfolioPageButton();
 
+function fitnessPageButton() {
 $('.fitness-click').click(function() {
     $('.expand').fadeOut(500, function() {
         $('.page-info, .page-technology-used, .page-info-content, .page-info-share').empty();
@@ -190,17 +209,25 @@ $('.fitness-click').click(function() {
         $('.page-info-share').html('<p>C</p> <p>D</p>');
     });
 });
+};
+fitnessPageButton();
 
+function removeSign() {
 $('.glyphicon-remove-sign').click(function() {
     $('.expand').fadeOut(500, function() {
         $('.page-info, .page-technology-used, .page-info-content, .page-info-share').empty();
     });
     $('#left-div-handler').delay(400).fadeIn();
 });
+}
+removeSign();
 
+function copyContent() {
 $(document).ready(function() {
     $('.mobile-480px').html($('.work').html());
 });
+}
+copyContent();
 
 function typeWord() {
     $(function() {
@@ -367,20 +394,6 @@ function stuckDivOnSize() {
     }
 }
 stuckDivOnSize();
-
-function pageLoadTop() {
-    $(window).on('unload', function() {
-        $(window).scrollTop(0);
-    });
-}
-pageLoadTop();
-
-$(document).ready(function() {
-    setTimeout(function() {
-        $('body').addClass('loaded');
-    }, 900);
-
-});
 
 function stickyNavbar() {
     $(document).ready(function() {
@@ -846,7 +859,7 @@ $(function() {
                 if (data.responseText !== '') {
                     $(formMessages).text(data.responseText);
                 } else {
-                    $(formMessages).text('Oops! An error occured and your message could not be sent.');
+                    $(formMessages).text('Oops! Twoja wiadomość nie może zostać wysłana');
                 }
             });
 
