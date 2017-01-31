@@ -1221,9 +1221,9 @@ function revealText() {
     }
 };
 var desktopHeight = $(window).height();
-if (desktopHeight > 595) {
+if (desktopHeight > 560) {
     revealText();
-} else if (desktopHeight <= 595) {
+} else if (desktopHeight <= 560) {
 
 }
 
