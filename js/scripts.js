@@ -11,7 +11,7 @@
 
 function pageLoadTop() {
     $(window).on('unload', function() {
-        $(window).scrollTop(0);
+        $('html, body').scrollTop(0);
     });
 }
 pageLoadTop();
@@ -47,8 +47,8 @@ function html5Resize() {
             opacity: 0
         });
         $(".work3 img").css("pointer-events", "none");
-        $('body').animate({
-            scrollTop: $(".work3").offset().top - 49
+        $('html, body').animate({
+            scrollTop: $(".work3").offset().top - 48
         }, 2400);
         TweenMax.to(this, 0.4, {
             xPercent: 150,
@@ -83,6 +83,10 @@ function css3Resize() {
         $('.html5, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
             opacity: 0
         });
+		$(".work3 img").css("pointer-events", "none");
+        $('html, body').animate({
+            scrollTop: $(".work3").offset().top - 48
+        }, 2400);
         TweenMax.to(this, 0.4, {
             xPercent: 50,
             scale: 2.0,
