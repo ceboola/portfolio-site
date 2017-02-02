@@ -57,7 +57,10 @@ h2 {
 h3 {
     bottom: -0.85em;
     color: #fff;
-    font: 800 5em/1em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-weight: 800;
+	font-size: 5em;
+	line-height: 1em;
     right: -0.1em;
     position: relative;
     text-transform: uppercase;
