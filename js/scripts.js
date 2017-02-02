@@ -99,6 +99,7 @@ function css3Resize() {
             $('.html5, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
                 opacity: 1
             });
+			$(".work3 img").css("pointer-events", "all");
             $(this).fadeOut();
             $('.tech-text').fadeOut();
             $(".about-skill").hide().html("<p class = 'over-text text-left about-skill'>Technologie które wykorzystywałem w swoich projektach, niektóre znam lepiej, niektórze gorzej. Jeżeli chcesz się dowiedzieć czegoś więcej <strong>kliknij</strong> poszczególną ikonę reprezentującą daną technologie.</p>").fadeIn(600);
