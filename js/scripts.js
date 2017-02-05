@@ -1225,11 +1225,21 @@ function revealText() {
 
     }
 };
+
+function heightToReveal() {
 var desktopHeight = $(window).height();
 if (desktopHeight > 560) {
     revealText();
 } else if (desktopHeight <= 560) {
 
+	}
 }
+heightToReveal();
+
+function currentYear(){
+var date = new Date().getFullYear();
+document.getElementById("year").innerHTML = date;
+}
+currentYear();
 
 console.log("%cdesign and developed by : %ccebula ( pemiz.com )", "color:gray; font-family:tahoma,arial;", "color:#ff002b; font-family:tahoma,arial; font-weight:bold");
