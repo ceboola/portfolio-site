@@ -488,10 +488,12 @@ initBt2();
 // needs refactoring someday, adding button selector dynamically to own filter (single button needs unique filter) / CBL
 
 function initBt2() {
-    var bt = document.querySelectorAll('#btn-1')[0];
-    var bt2 = document.querySelectorAll('#btn-2')[0];
-    var bt3 = document.querySelectorAll('#btn-3')[0];
-    var filter = document.querySelectorAll('#filter-goo-2 feGaussianBlur')[0];
+    var bt = document.querySelector('#btn-1');
+    var bt2 = document.querySelector('#btn-2');
+    var bt3 = document.querySelector('#btn-3');
+    var filter = document.querySelector('#filter-goo feGaussianBlur');
+	var filter2 = document.querySelector('#filter-goo-1 feGaussianBlur');
+	var filter3 = document.querySelector('#filter-goo-2 feGaussianBlur');
     var particleCount = 16;
     var colors = ['#DE8AA0', '#8AAEDE', '#FFB300', '#60C7DA'];
 
@@ -560,7 +562,7 @@ function initBt2() {
         var particles = [];
         var tl = new TimelineLite({
             onUpdate: function() {
-                filter.setAttribute('x', 0);
+                filter2.setAttribute('x', 0);
             }
         });
 
@@ -621,7 +623,7 @@ function initBt2() {
         var particles = [];
         var tl = new TimelineLite({
             onUpdate: function() {
-                filter.setAttribute('x', 0);
+                filter3.setAttribute('x', 0);
             }
         });
 
