@@ -491,9 +491,9 @@ function initBt2() {
     var bt = document.querySelector('#btn-1');
     var bt2 = document.querySelector('#btn-2');
     var bt3 = document.querySelector('#btn-3');
-    var filter = document.querySelector('#filter-goo feGaussianBlur');
-	var filter2 = document.querySelector('#filter-goo-1 feGaussianBlur');
-	var filter3 = document.querySelector('#filter-goo-2 feGaussianBlur');
+    var filter = document.querySelector('#filter-goo');
+	var filter2 = document.querySelector('#filter-goo-1');
+	var filter3 = document.querySelector('#filter-goo-2');
     var particleCount = 16;
     var colors = ['#DE8AA0', '#8AAEDE', '#FFB300', '#60C7DA'];
 
