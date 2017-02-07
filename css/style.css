@@ -674,6 +674,10 @@ h3 span:nth-child(2) {
     padding: 60px;
 }
 
+.work3[tabindex] {
+	outline: none;
+}
+
 .skill-text {
     width: 100%;
     height: 40vh;
@@ -1087,6 +1091,10 @@ h3 span:nth-child(2) {
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 80px;
+}
+
+.work[tabindex] {
+	outline: none;
 }
 
 .container-fluid {
