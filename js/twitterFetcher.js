@@ -365,12 +365,12 @@
                 'tweet?in_reply_to=' + tids[n] +
                 '" class="twitter_reply_icon"' +
                 (targetBlank ? ' target="_blank">' : '>') +
-                '<i class="fa fa-reply" title = "reply" aria-hidden="true"></i></a><a href="https://twitter.com/intent/retweet?' +
+                '<span class="fa fa-reply" aria-hidden="true"></span><span class="sr-only">Reply</span></a><a href="https://twitter.com/intent/retweet?' +
                 'tweet_id=' + tids[n] + '" class="twitter_retweet_icon"' +
-                (targetBlank ? ' target="_blank">' : '>') + '<i class="fa fa-retweet" title = "retweet" aria-hidden="true"></i></a>' +
+                (targetBlank ? ' target="_blank">' : '>') + '<span class="fa fa-retweet" aria-hidden="true"></span><span class="sr-only">Retweet</span></a>' +
                 '<a href="https://twitter.com/intent/favorite?tweet_id=' +
                 tids[n] + '" class="twitter_fav_icon"' +
-                (targetBlank ? ' target="_blank">' : '>') + '<i class="fa fa-heart" title = "favorite" aria-hidden="true"></i></a></p>';
+                (targetBlank ? ' target="_blank">' : '>') + '<span class="fa fa-heart" aria-hidden="true"></span><span class="sr-only">Favorite</span></a></p>';
           }
           if (showImages && images[n] !== undefined && extractImageUrl(images[n]) !== undefined) {
             op += '<div class="media">' +
