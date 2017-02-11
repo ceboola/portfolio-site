@@ -693,22 +693,24 @@
 							<div class = "form-text">
                             <div class="form-group">
                                 <div class="col-xs-12 col-sm-12">
+									<label class = "sr-only" for="name">Name:</label>
                                     <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-xs-12 col-sm-12">
+									<label class = "sr-only" for="email">Email:</label>
                                     <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
                                 </div>
                             </div>
-
-                            <textarea class="form-control" rows="10" id="message" placeholder="MESSAGE" name="message"></textarea>
+									<label class = "sr-only" for="message">Message:</label>
+									<textarea class="form-control" rows="10" id="message" placeholder="MESSAGE" name="message"></textarea>
 							</div>
                             <!-- <input type="submit" value="WYSLIJ"/> -->
 
                             <div class="center-component">
-                                <button class="colins-submit">
+                                <button class="colins-submit" aria-label = "WYŚLIJ">
                                     <svg id="send-btn" width="336" height="60" viewBox="0 0 336 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
                                         <rect class="btn-shape btn-bg" x="3" y="3" width="330" height="54" rx="6" ry="6" fill="#ffffff" fill-opacity="1" stroke="#ccc" stroke-width="4" />
