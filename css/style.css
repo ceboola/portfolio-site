@@ -620,6 +620,11 @@ h3 span:nth-child(2) {
 	margin: 0 auto;
 }
 
+.h1 {
+	padding: 0;
+	margin: 0;
+}
+
 .about, .about3 {
     background-color: #1E1E20;
     height: 100vh;
@@ -924,12 +929,33 @@ h3 span:nth-child(2) {
     display: none;
 }
 
-.glyphicon.glyphicon-remove-sign {
+span.fa.fa-times {
     font-size: 40px;
     color: white;
     float: right;
     padding-top: 15px;
     cursor: pointer;
+}
+
+.buttonCloseWorks {
+	float: right;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    outline: 0;
+}
+
+.buttonCloseSkill {
+	float: right;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    outline: 0;
+	top: -1px;
 }
 
 .page-info {
@@ -1726,7 +1752,7 @@ span[data-scribe="element:name"] {
 }
 */
 
-.footer-center i {
+.footer-center span {
     background-color: #33383b;
     color: #ffffff;
     font-size: 21px;
@@ -1737,7 +1763,7 @@ span[data-scribe="element:name"] {
     margin: 10px 15px;
 }
 
-.footer-center i.fa-envelope {
+.footer-center span.fa-envelope {
     font-size: 17px;
     line-height: 38px;
     margin-left: -15px;
@@ -1757,15 +1783,15 @@ span[data-scribe="element:name"] {
     color: white;
 }
 
-i.fa.fa-map-marker {
+span.fa.fa-map-marker {
     margin-left: -32px;
 }
 
-i.fa.fa-phone {
+span.fa.fa-phone {
     margin-left: -60px;
 }
 
-.footer-center i.fa-github-alt {
+.footer-center span.fa-github-alt {
     font-size: 20px;
     line-height: 38px;
     margin-left: -85px;
