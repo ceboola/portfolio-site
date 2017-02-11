@@ -56,7 +56,7 @@ function html5Resize() {
             ease: Power1.easeInOut,
             force3D: true
         });
-        $(".about-skill").hide().html("<p class = 'tech-text over-text'>Hello!!!!3Hello!!!!3Hello!!!!3Hello!!!!3</p> <span class='glyphicon glyphicon-remove-sign resize' aria-hidden='true'></span>").fadeIn(600);
+        $(".about-skill").hide().html("<p class = 'tech-text over-text'>Hello!!!!3Hello!!!!3Hello!!!!3Hello!!!!3</p> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>").fadeIn(600);
 
         document.querySelector('.resize').addEventListener('click', function clickB() {
             $('.css3, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
@@ -93,7 +93,7 @@ function css3Resize() {
             ease: Power1.easeInOut,
             force3D: true
         });
-        $(".about-skill").hide().html("<p class = 'tech-text over-text'>Hello!!!!3Hello!!!!3Hello!!!!3Hello!!!!3</p> <span class='glyphicon glyphicon-remove-sign resize' aria-hidden='true'></span>").fadeIn(600);
+        $(".about-skill").hide().html("<p class = 'tech-text over-text'>Hello!!!!3Hello!!!!3Hello!!!!3Hello!!!!3</p> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>").fadeIn(600);
 
         document.querySelector('.resize').addEventListener('click', function clickB() {
             $('.html5, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
@@ -218,7 +218,7 @@ $('.fitness-click').click(function() {
 fitnessPageButton();
 
 function removeSign() {
-$('.glyphicon-remove-sign').click(function() {
+$('.fa-times').click(function() {
     $('.expand').fadeOut(500, function() {
         $('.page-info, .page-technology-used, .page-info-content, .page-info-share').empty();
     });
