@@ -370,7 +370,7 @@ function svgDraw() {
         type: 'delayed',
         duration: 160
     }, function() {
-        $('#ironman').attr('style', '-webkit-animation:fillthis 0.6s forwards');
+        $('#ironman').attr('style', '-webkit-animation:fillthis 0.6s forwards; animation:fillthis 0.6s forwards');
     });
 
     new Vivus('logo2', {
