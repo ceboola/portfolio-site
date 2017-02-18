@@ -685,6 +685,7 @@ h3 span:nth-child(2) {
     padding-right: 30px;
 	margin-bottom: -5%;
     cursor: pointer;
+	vertical-align: top;
 }
 
 .svg-sprites {
@@ -810,6 +811,7 @@ h3 span:nth-child(2) {
     -o-transition: all 0.3s ease-in 0.4s;
     -ms-transition: all 0.3s ease-in 0.4s;
     transition: all 0.3s ease-in 0.4s;
+	width: 100%;
 }
 
 .view-sixth h3 {
@@ -882,6 +884,7 @@ h3 span:nth-child(2) {
     -o-transition-delay: 0s;
     -ms-transition-delay: 0s;
     transition-delay: 0s;
+	width: 100%;
 }
 
 .view-sixth:hover img {
