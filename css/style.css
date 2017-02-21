@@ -1167,13 +1167,13 @@ span.fa.fa-times {
 }
 
 #hexagon {
-    width: 8.1vw;
-    height: 8.1vw;
-    position: absolute;
-    left: 100%;
-    top: 8%;
-    margin-left: -4vw;
-    filter: url(#drop-shadow);
+	width: 8.1vw;
+	height: 8.1vw;
+	position: absolute;
+	left: 100%;
+	top: 8%;
+	margin-left: -4vw;
+	filter: url(#drop-shadow);
 }
 
 #hex,
@@ -1203,9 +1203,6 @@ span.fa.fa-times {
 
 #ironman {
     opacity: 0;
-	width: 100%;
-	height: 100%;
-
 }
 
 .vivusWord {
@@ -1219,7 +1216,7 @@ span.fa.fa-times {
     fill: transparent;
     -webkit-transition: fill 1.2s, stroke-width 0.3s;
     -moz-transition: fill 1.2s, stroke-width 0.3s;
-    transition: fill 1.2s, stroke-width 0.3s;
+    transform: fill 1.2s, stroke-width 0.3s;
 }
 
 #logo2 path {
