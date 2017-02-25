@@ -18,10 +18,19 @@
     <meta property="og:type" content="Website"/>
     <meta property="og:url" content="http://www.pemiz.com/" />
     <meta property="og:image" content="http://pemiz.com/img/portfolio3.png" />
-	
+
     <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/bootstrap.min.css"></noscript>
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+	
+	<style>
+	#loader,.h3-text{position:relative}#loader:after,#loader:before{content:""}html{overflow-x:hidden}section{height:auto;width:100%}h1{margin-bottom:15px;text-align:center;color:rgba(236,236,236,.47);text-shadow:4px 3px 4px rgba(0,0,0,.2)}h3{color:#ddd;font-weight:700;font-family:'Droid Serif',serif}.h3-text{bottom:-.85em;color:#fff;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:5.13vw;line-height:1em;right:-.1em;text-transform:uppercase;width:100%}
+	.h3-text span{background:#000;color:#fff;display:inline-block;float:right;clear:both;padding:0 .15em;text-align:right}.h3-text span:nth-child(2){background:#fff;color:#000}#loader-wrapper{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;overflow:hidden}#loader{display:block;left:50%;top:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;border:3px solid transparent;border-top-color:#1E1E20;animation:spin 1.7s linear infinite;z-index:9999}
+	#loader:before{position:absolute;top:5px;left:5px;right:5px;bottom:5px;border-radius:50%;border:3px solid transparent;border-top-color:#DC3522;-webkit-animation:spin-reverse .6s linear infinite;animation:spin-reverse .6s linear infinite}
+	#loader:after{position:absolute;top:15px;left:15px;right:15px;bottom:15px;border-radius:50%;border:3px solid transparent;border-top-color:#D9CB9E;-webkit-animation:spin 1s linear infinite;animation:spin 1s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}@keyframes spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes spin-reverse{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(-360deg)}}@keyframes spin-reverse{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}}#loader-wrapper .loader-section{position:absolute;top:0;width:50%;height:100%;background:#374140}#loader-wrapper .loader-section.section-left{left:0}#loader-wrapper .loader-section.section-right{right:0}
+	</style>
 	
     <!-- fonts -->
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css' media="none" onload="if(media!='all')media='all'">
@@ -95,7 +104,7 @@
             <div class="row">
                 <div class="col-md-12" style="z-index:10;">
                     <div class="hero-text">
-                        <h3><span>Front-End</span> <span class = "typing"></span>
+                        <h3 class = "h3-text"><span>Front-End</span> <span class = "typing"></span>
 						<span>with
 
 <svg id = "heart" xmlns="http://www.w3.org/2000/svg" width="50" height="50"
@@ -737,13 +746,14 @@
     </section>
 
     <!-- main js scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-latest.min.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js" async></script>
+	<script type="text/javascript" src="js/loadCSS.min.js" async></script>
     <script type="text/javascript" src="js/bootstrap.min.js" async></script>
     <script src="js/jquery.stuck.js" async></script>
     <script src="js/typed.js" async></script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js" defer></script>
     <script type="text/javascript" src="js/twitterFetcher.js" async></script>
 	<script src="js/anime.min.js" async></script>
 	<script src="js/scrollMonitor.js" async></script>
