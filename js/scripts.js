@@ -346,70 +346,45 @@ function onScrollAnimate() {
 }
 onScrollAnimate();
 	
-function svgDraw() {
+var SvgDraw = function (handlerVivus, typeVivus, durationVivus, mainTextVivus, barVivus) {
+this.handlerVivus = handlerVivus;
+this.typeVivus = typeVivus;
+this.durationVivus = durationVivus;
+this.mainTextVivus = mainTextVivus;
+this.barVivus = barVivus;
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 	if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 		
-    new Vivus('logo', {
-        type: 'delayed',
-        duration: 60
+    new Vivus(handlerVivus, {
+        type: typeVivus,
+        duration: durationVivus
     }, function() {
-		TweenLite.to($("#Zaznaczenie, #Zaznaczenie1, #Zaznaczenie2, #Zaznaczenie3, #Zaznaczenie4"), 1.3, {fill:"white", strokeWidth:"0.9", delay:0.01});
-		TweenLite.to($('#Zaznaczenie5'), 1.3, {fill:"#DC3522", strokeWidth:"0.6", delay:0.01})
-    });
-	
-	new Vivus('logo2', {
-        type: 'oneByOne',
-        duration: 60
-    }, function() {
-        TweenLite.to($("#Zaznaczenie6, #Zaznaczenie7, #Zaznaczenie8, #Zaznaczenie9, #Zaznaczenie10"), 1.3, {fill:"white", strokeWidth:"0.9", delay:0.01});
-		TweenLite.to($('#Zaznaczenie11'), 1.3, {fill:"#DC3522", strokeWidth:"0.6", delay:0.01})
-    });
-	
-	new Vivus('logo3', {
-        type: 'oneByOne',
-        duration: 60
-    }, function() {
-        TweenLite.to($("#Zaznaczenie12, #Zaznaczenie13, #Zaznaczenie14, #Zaznaczenie15, #Zaznaczenie16"), 1.3, {fill:"white", strokeWidth:"0.9", delay:0.01});
-		TweenLite.to($('#Zaznaczenie17'), 1.3, {fill:"#DC3522", strokeWidth:"0.6", delay:0.01})
+		TweenLite.to($(mainTextVivus), 1.3, {fill:"white", strokeWidth:"0.9", delay:0.01});
+		TweenLite.to($(barVivus), 1.3, {fill:"#DC3522", strokeWidth:"0.6", delay:0.01})
     });
 	
 	} else {
-		new Vivus('logo', {
-        type: 'delayed',
-        duration: 60
+		
+		new Vivus(handlerVivus, {
+        type: typeVivus,
+        duration: durationVivus
     }, function() {
-        $('#Zaznaczenie, #Zaznaczenie1, #Zaznaczenie2, #Zaznaczenie3, #Zaznaczenie4').attr('style', 'fill: rgba(255, 255, 255, 0.8); stroke-width: 0.9px;');
-        $('#Zaznaczenie5').attr('style', 'fill: #DC3522; stroke-width: 0.6px;');
-		});
-
-    new Vivus('logo2', {
-        type: 'oneByOne',
-        duration: 60
-    }, function() {
-        $('#Zaznaczenie6, #Zaznaczenie7, #Zaznaczenie8, #Zaznaczenie9, #Zaznaczenie10').attr('style', 'fill: rgba(255, 255, 255, 0.8); stroke-width: 0.9px;');
-        $('#Zaznaczenie11').attr('style', 'fill: #DC3522; stroke-width: 0.6px;');
-    });
-
-    new Vivus('logo3', {
-        type: 'oneByOne',
-        duration: 60
-    }, function() {
-        $('#Zaznaczenie12, #Zaznaczenie13, #Zaznaczenie14, #Zaznaczenie15, #Zaznaczenie16').attr('style', 'fill: rgba(255, 255, 255, 0.8); stroke-width: 0.9px;');
-        $('#Zaznaczenie17').attr('style', 'fill: #DC3522; stroke-width: 0.6px;');
-    });
+        $(mainTextVivus).attr('style', 'fill: rgba(255, 255, 255, 0.8); stroke-width: 0.9px;');
+        $(barVivus).attr('style', 'fill: #DC3522; stroke-width: 0.6px;');
+		});   
 	}
-
+	
 	new Vivus('hexagon', {
         type: 'delayed',
         duration: 160
     }, function() {
         $('#ironman').attr('style', '-webkit-animation:fillthis 0.6s forwards; animation:fillthis 0.6s forwards;');
     });
-    
 }
-svgDraw();
+var omnieVivus = new SvgDraw('logo', 'delayed', 60, "#Zaznaczenie, #Zaznaczenie1, #Zaznaczenie2, #Zaznaczenie3, #Zaznaczenie4", '#Zaznaczenie5');
+var praceVivus = new SvgDraw('logo2', 'oneByOne', 60, "#Zaznaczenie6, #Zaznaczenie7, #Zaznaczenie8, #Zaznaczenie9, #Zaznaczenie10", '#Zaznaczenie11');
+var skillVivus = new SvgDraw('logo3', 'oneByOne', 60, "#Zaznaczenie12, #Zaznaczenie13, #Zaznaczenie14, #Zaznaczenie15, #Zaznaczenie16", '#Zaznaczenie17');
 
 function stuckDivOnSize() {
     if (screen.width > 480) {
