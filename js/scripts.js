@@ -49,6 +49,7 @@ removeStickOnMobile();
 */
 
 var Resized = function (xxPercent, yyPercent, sscale, eease, fforce3D, classGsap, textSkill) {
+	
 this.xxPercent = xxPercent,
 this.yyPercent = yyPercent,
 this.sscale = sscale,
@@ -57,12 +58,10 @@ this.fforce3D = fforce3D,
 this.classGsap = classGsap,
 this.textSkill = textSkill;
 
-
-
-	document.querySelector(classGsap).addEventListener('click', function clickA() {
-        $(".skills").not(classGsap).animate({
-      opacity: 0
-    });
+document.querySelector(classGsap).addEventListener('click', function clickA() {
+	$(".skills").not(classGsap).animate({
+    opacity: 0
+	});
 		
        $(".work3 img").css("pointer-events", "none");
        $('html, body').animate({
@@ -504,39 +503,31 @@ if (isSafari) {
     document.getElementsByTagName('html')[0].classList.add('safari');
 }
 
-initBt2();
-
-// needs refactoring someday, adding button selector dynamically to own filter (single button needs unique filter) / CBL
-
-function initBt2() {
-    var bt = document.querySelector('#btn-1');
-    var bt2 = document.querySelector('#btn-2');
-    var bt3 = document.querySelector('#btn-3');
-    var filter = document.querySelector('#filter-goo');
-	var filter2 = document.querySelector('#filter-goo-1');
-	var filter3 = document.querySelector('#filter-goo-2');
+var buttonWorks = function (bt, filter) {
+	this.bt = bt;
+	this.filter = filter;
     var particleCount = 16;
     var colors = ['#DE8AA0', '#8AAEDE', '#FFB300', '#60C7DA'];
 
-    bt.addEventListener('click', function() {
+    document.querySelector(bt).addEventListener('click', function() {
         var particles = [];
         var tl = new TimelineLite({
             onUpdate: function() {
-                filter.setAttribute('x', 0);
+                document.querySelector(filter).setAttribute('x', 0);
             }
         });
 
-        tl.to(bt.querySelectorAll('.button__bg'), 0.6, {
+        tl.to(document.querySelector(bt).querySelectorAll('.button__bg'), 0.6, {
             scaleX: 1.07
         });
-        tl.to(bt.querySelectorAll('.button__bg'), 0.9, {
+        tl.to(document.querySelector(bt).querySelectorAll('.button__bg'), 0.9, {
             scale: 1.01,
             ease: Elastic.easeOut.config(1.2, 0.4)
         }, 0.6);
 
         for (var i = 0; i < particleCount; i++) {
             particles.push(document.createElement('span'));
-            bt.appendChild(particles[i]);
+            document.querySelector(bt).appendChild(particles[i]);
 
             particles[i].classList.add(i % 2 ? 'left' : 'right');
 
@@ -578,130 +569,11 @@ function initBt2() {
             }, '-=0.2');
         }
     });
-
-    bt2.addEventListener('click', function() {
-        var particles = [];
-        var tl = new TimelineLite({
-            onUpdate: function() {
-                filter2.setAttribute('x', 0);
-            }
-        });
-
-        tl.to(bt2.querySelectorAll('.button__bg'), 0.6, {
-            scaleX: 1.07
-        });
-        tl.to(bt2.querySelectorAll('.button__bg'), 0.9, {
-            scale: 1.01,
-            ease: Elastic.easeOut.config(1.2, 0.4)
-        }, 0.6);
-
-        for (var i = 0; i < particleCount; i++) {
-            particles.push(document.createElement('span'));
-            bt2.appendChild(particles[i]);
-
-            particles[i].classList.add(i % 2 ? 'left' : 'right');
-
-            var dir = i % 2 ? '-' : '+';
-            var r = i % 2 ? getRandom(-1, 1) * i / 2 : getRandom(-1, 1) * i;
-            var size = i < 2 ? 1 : getRandom(0.8, 0.8);
-            var tl = new TimelineLite({
-                onComplete: function(i) {
-                    particles[i].parentNode.removeChild(particles[i]);
-                    this.kill();
-                },
-                onCompleteParams: [i]
-            });
-
-            tl.set(particles[i], {
-                scale: size
-            });
-            tl.to(particles[i], 0.6, {
-                x: dir + 20,
-                scaleX: 3,
-                ease: SlowMo.ease.config(0.1, 0.7, false)
-            });
-            tl.to(particles[i], 0.1, {
-                scale: size,
-                x: dir + '=25'
-            }, '-=0.1');
-            if (i >= 2) tl.set(particles[i], {
-                backgroundColor: colors[Math.round(getRandom(0, 3))]
-            });
-            tl.to(particles[i], 0.6, {
-                x: dir + getRandom(60, 100),
-                y: r * 10,
-                scale: 0.1,
-                ease: Power3.easeOut
-            });
-            tl.to(particles[i], 0.2, {
-                opacity: 0,
-                ease: Power3.easeOut
-            }, '-=0.2');
-        }
-    });
-
-    bt3.addEventListener('click', function() {
-        var particles = [];
-        var tl = new TimelineLite({
-            onUpdate: function() {
-                filter3.setAttribute('x', 0);
-            }
-        });
-
-        tl.to(bt3.querySelectorAll('.button__bg'), 0.6, {
-            scaleX: 1.07
-        });
-        tl.to(bt3.querySelectorAll('.button__bg'), 0.9, {
-            scale: 1.01,
-            ease: Elastic.easeOut.config(1.2, 0.4)
-        }, 0.6);
-
-        for (var i = 0; i < particleCount; i++) {
-            particles.push(document.createElement('span'));
-            bt3.appendChild(particles[i]);
-
-            particles[i].classList.add(i % 2 ? 'left' : 'right');
-
-            var dir = i % 2 ? '-' : '+';
-            var r = i % 2 ? getRandom(-1, 1) * i / 2 : getRandom(-1, 1) * i;
-            var size = i < 2 ? 1 : getRandom(0.8, 0.8);
-            var tl = new TimelineLite({
-                onComplete: function(i) {
-                    particles[i].parentNode.removeChild(particles[i]);
-                    this.kill();
-                },
-                onCompleteParams: [i]
-            });
-
-            tl.set(particles[i], {
-                scale: size
-            });
-            tl.to(particles[i], 0.6, {
-                x: dir + 20,
-                scaleX: 3,
-                ease: SlowMo.ease.config(0.1, 0.7, false)
-            });
-            tl.to(particles[i], 0.1, {
-                scale: size,
-                x: dir + '=25'
-            }, '-=0.1');
-            if (i >= 2) tl.set(particles[i], {
-                backgroundColor: colors[Math.round(getRandom(0, 3))]
-            });
-            tl.to(particles[i], 0.6, {
-                x: dir + getRandom(60, 100),
-                y: r * 10,
-                scale: 0.1,
-                ease: Power3.easeOut
-            });
-            tl.to(particles[i], 0.2, {
-                opacity: 0,
-                ease: Power3.easeOut
-            }, '-=0.2');
-        }
-    });
-
 }
+
+var buttonPortfolio = new buttonWorks('#btn-1','#filter-goo');
+var buttonFitness = new buttonWorks('#btn-2','#filter-goo-1');
+var buttonComing = new buttonWorks('#btn-3','#filter-goo-2');
 
 $(function() {
 
