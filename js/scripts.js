@@ -8,6 +8,13 @@
 //
 // Additionally, you can toggle specific options in the Configure
 // menu.
+var textSkillArray = [];
+textSkillArray[0] = "<span class = 'tech-text over-text'><ul class = 'skill-items'><li>Używam znaczników HTML5</li><li>Staram się dostarczać semantyczny kod</li><li>Próbuję również dostarczać dostępne strony</li><li>Optymalizuję kod dla lepszego indeksowania</li></ul></span><button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>";
+textSkillArray[1] = "<span class = 'tech-text over-text'><ul class = 'skill-items'><li>Korzystam z nowych selektorów (attribute)</li><li>Tworzę własnę animację za pomocą key-frames</li><li>Wykorzystuję pseudoelementy i pseudoselektory</li><li>W projektach stosuję nowe metody takie jak np. flexbox</li></ul></span> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>";
+textSkillArray[2] = "<span class = 'tech-text over-text'><ul class = 'skill-items'><li>Stosuję trzy paradygmaty (imperatywny, funkcyjny, obiektowy)</li><li>Rozumiem czym jest: hoisting, IIFE, closures, global/local scope, rekurencja, typowanie dynamiczne i wiele więcej</li><li>Staram się wdrażać zasady D.R.Y</li><li>Swój kod próbuję pisać tak aby był czytelny dla osoby postronnej</li></ul></span> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>";
+textSkillArray[3] = "<span class = 'tech-text over-text'><ul class = 'skill-items'><li>Stosuję meta tagi skalujące</li><li>Korzystam również z media-queries dla responsywności na różnych urządzeniach</li><li>Czasami stosuję twarde breakpointy</li></ul></span> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>";
+textSkillArray[4] = "<span class = 'tech-text over-text'><ul class = 'skill-items'><li>Wykorzystuję preprocesor w stopniu podstawowym: tworzenie zmiennych, pętli, warunków, mixinów/extendów</li><li>Korzystam z nestingu</li><li>Potrafię zaimportować inne pliki do Saas</li></ul></span> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>";
+textSkillArray[5] = "<span class = 'tech-text over-text'><ul class = 'skill-items'><li>Gimpa wykorzystuję przede wszystkim do grafiki wektorowej (SVG), tworzę w nim ścieżki które potem importuje do swoich projektów</li></ul></span> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>";
 
 function pageLoadTop() {
     $(window).on('unload', function() {
@@ -20,7 +27,7 @@ function preLoad() {
 $(document).ready(function() {
     setTimeout(function() {
         $('body').addClass('loaded');
-    }, 900);
+    }, 100);
 });
 }
 preLoad();
@@ -41,32 +48,47 @@ removeStickOnMobile();
 });
 */
 
-function html5Resize() {
-    document.querySelector('.html5').addEventListener('click', function clickA() {
-        $('.css3, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
-            opacity: 0
-        });
-        $(".work3 img").css("pointer-events", "none");
-        $('html, body').animate({
-            scrollTop: $(".work3").offset().top - 48
+var Resized = function (xxPercent, yyPercent, sscale, eease, fforce3D, classGsap, textSkill) {
+this.xxPercent = xxPercent,
+this.yyPercent = yyPercent,
+this.sscale = sscale,
+this.eease = eease,
+this.fforce3D = fforce3D,
+this.classGsap = classGsap,
+this.textSkill = textSkill;
+
+
+
+	document.querySelector(classGsap).addEventListener('click', function clickA() {
+        $(".skills").not(classGsap).animate({
+      opacity: 0
+    });
+		
+       $(".work3 img").css("pointer-events", "none");
+       $('html, body').animate({
+			scrollTop: $(".work3").offset().top - 48
         }, 2400);
+		
         TweenMax.to(this, 0.4, {
-            xPercent: 150,
-            scale: 2.0,
-            ease: Power1.easeInOut,
-            force3D: true
+            xPercent: xxPercent,
+			yPercent: yyPercent,
+            scale: sscale,
+            ease: eease,
+            force3D: fforce3D
         });
-        $(".about-skill").hide().html("<p class = 'tech-text over-text'>Hello!!!!3Hello!!!!3Hello!!!!3Hello!!!!3</p> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>").fadeIn(600);
+        $(".about-skill").hide().html(textSkill).fadeIn(600);
 
         document.querySelector('.resize').addEventListener('click', function clickB() {
-            $('.css3, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
+            $(".skills").not(classGsap).animate({
                 opacity: 1
             });
+			
             $(".work3 img").css("pointer-events", "all");
-            $(this).fadeOut();
+            $('.resize').fadeOut();
             $('.tech-text').fadeOut();
+			
             $(".about-skill").hide().html("<p class = 'over-text text-left about-skill'>Technologie które wykorzystywałem w swoich projektach, niektóre znam lepiej, niektórze gorzej. Jeżeli chcesz się dowiedzieć czegoś więcej <strong>kliknij</strong> poszczególną ikonę reprezentującą daną technologie.</p>").fadeIn(600);
-            TweenMax.to('.html5', 0.4, {
+            TweenMax.to(classGsap, 0.4, {
                 xPercent: 0,
                 yPercent: 0,
                 scale: 1,
@@ -76,45 +98,13 @@ function html5Resize() {
         }, false);
     }, false);
 }
-html5Resize();
+var html5Resize = new Resized(165,20,2.0,Power1.easeInOut,true,'.html5', textSkillArray[0]);
+var css3Resize = new Resized(70,20,2.0,Power1.easeInOut,true,'.css3', textSkillArray[1]);
+var jsResize = new Resized(-25,20,2.0,Power1.easeInOut,true,'.js', textSkillArray[2]);
+var rwdResize = new Resized(-145,20,2.0,Power1.easeInOut,true,'.rwd', textSkillArray[3]);
+var sassResize = new Resized(165,-60,2.0,Power1.easeInOut,true,'.sass', textSkillArray[4]);
+var gimpResize = new Resized(70,-60,2.0,Power1.easeInOut,true,'.gimp', textSkillArray[5]);
 
-function css3Resize() {
-    document.querySelector('.css3').addEventListener('click', function clickA() {
-        $('.html5, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
-            opacity: 0
-        });
-		$(".work3 img").css("pointer-events", "none");
-        $('html, body').animate({
-            scrollTop: $(".work3").offset().top - 48
-        }, 2400);
-        TweenMax.to(this, 0.4, {
-            xPercent: 50,
-            scale: 2.0,
-            ease: Power1.easeInOut,
-            force3D: true
-        });
-        $(".about-skill").hide().html("<p class = 'tech-text over-text'>Hello!!!!3Hello!!!!3Hello!!!!3Hello!!!!3</p> <button class = 'buttonCloseSkill resize'><span class='fa fa-times' aria-hidden='true'></span><span class = 'sr-only'>Close</span></button>").fadeIn(600);
-
-        document.querySelector('.resize').addEventListener('click', function clickB() {
-            $('.html5, .js, .rwd, .sass, .gimp, .jquery, .mysql, .github, .php, .bootstrap').animate({
-                opacity: 1
-            });
-			$(".work3 img").css("pointer-events", "all");
-            $(this).fadeOut();
-            $('.tech-text').fadeOut();
-            $(".about-skill").hide().html("<p class = 'over-text text-left about-skill'>Technologie które wykorzystywałem w swoich projektach, niektóre znam lepiej, niektórze gorzej. Jeżeli chcesz się dowiedzieć czegoś więcej <strong>kliknij</strong> poszczególną ikonę reprezentującą daną technologie.</p>").fadeIn(600);
-            TweenMax.to('.css3', 0.4, {
-                xPercent: 0,
-                yPercent: 0,
-                scale: 1,
-                ease: Power1.easeInOut,
-                force3D: true
-            });
-        }, false);
-    }, false);
-}
-
-css3Resize();
 
 function heart() {
     var $heart = $('#heart');
