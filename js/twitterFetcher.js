@@ -158,26 +158,26 @@
         script.type = 'text/javascript';
         if (config.list !== undefined) {
           script.src = 'https://syndication.twitter.com/timeline/list?' +
-              'callback=twitterFetcher.callback&dnt=false&list_slug=' +
+              'callback=__twttrf.callback&dnt=false&list_slug=' +
               config.list.listSlug + '&screen_name=' + config.list.screenName +
               '&suppress_response_codes=true&lang=' + (config.lang || lang) +
               '&rnd=' + Math.random();
         } else if (config.profile !== undefined) {
           script.src = 'https://syndication.twitter.com/timeline/profile?' +
-              'callback=twitterFetcher.callback&dnt=false' +
+              'callback=__twttrf.callback&dnt=false' +
               '&screen_name=' + config.profile.screenName +
               '&suppress_response_codes=true&lang=' + (config.lang || lang) +
               '&rnd=' + Math.random();
         } else if (config.likes !== undefined) {
           script.src = 'https://syndication.twitter.com/timeline/likes?' +
-              'callback=twitterFetcher.callback&dnt=false' +
+              'callback=__twttrf.callback&dnt=false' +
               '&screen_name=' + config.likes.screenName +
               '&suppress_response_codes=true&lang=' + (config.lang || lang) +
               '&rnd=' + Math.random();
         } else {
           script.src = 'https://cdn.syndication.twimg.com/widgets/timelines/' +
               config.id + '?&lang=' + (config.lang || lang) +
-              '&callback=twitterFetcher.callback&' +
+              '&callback=__twttrf.callback&' +
               'suppress_response_codes=true&rnd=' + Math.random();
         }
         head.appendChild(script);
@@ -398,6 +398,7 @@
   };
 
   // It must be a global variable because it will be called by JSONP.
+  window.__twttrf = twitterFetcher;
   window.twitterFetcher = twitterFetcher;
   return twitterFetcher;
 }));
