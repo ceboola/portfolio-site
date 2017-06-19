@@ -23,6 +23,14 @@ function pageLoadTop() {
 }
 pageLoadTop();
 
+(function() {
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});
+})();
+
 function preLoad() {
 $(document).ready(function() {
     setTimeout(function() {
@@ -44,12 +52,12 @@ function removeStickOnMobile() {
 removeStickOnMobile();
 
 /* $(window).load(function(){
-    $('#google-map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312776.98049582145!2d20.781005351498603!3d52.233026756721635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1478744247909');    
+    $('#google-map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312776.98049582145!2d20.781005351498603!3d52.233026756721635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1478744247909');
 });
 */
 
 var Resized = function (xxPercent, yyPercent, sscale, eease, fforce3D, classGsap, textSkill) {
-	
+
 this.xxPercent = xxPercent,
 this.yyPercent = yyPercent,
 this.sscale = sscale,
@@ -62,12 +70,12 @@ document.querySelector(classGsap).addEventListener('click', function clickA() {
 	$(".skills").not(classGsap).animate({
     opacity: 0
 	});
-		
+
        $(".work3 img").css("pointer-events", "none");
        $('html, body').animate({
 			scrollTop: $(".work3").offset().top - 48
         }, 2400);
-		
+
         TweenMax.to(this, 0.4, {
             xPercent: xxPercent,
 			yPercent: yyPercent,
@@ -81,11 +89,11 @@ document.querySelector(classGsap).addEventListener('click', function clickA() {
             $(".skills").not(classGsap).animate({
                 opacity: 1
             });
-			
+
             $(".work3 img").css("pointer-events", "all");
             $('.resize').fadeOut();
             $('.tech-text').fadeOut();
-			
+
             $(".about-skill").hide().html("<p class = 'over-text text-left about-skill'>Technologie które wykorzystywałem w swoich projektach, niektóre znam lepiej, niektórze gorzej. Jeżeli chcesz się dowiedzieć czegoś więcej <strong>kliknij</strong> poszczególną ikonę reprezentującą daną technologie.</p>").fadeIn(600);
             TweenMax.to(classGsap, 0.4, {
                 xPercent: 0,
@@ -345,7 +353,7 @@ function onScrollAnimate() {
     });
 }
 onScrollAnimate();
-	
+
 var SvgDraw = function (handlerVivus, typeVivus, durationVivus, mainTextVivus, barVivus) {
 this.handlerVivus = handlerVivus;
 this.typeVivus = typeVivus;
@@ -355,7 +363,7 @@ this.barVivus = barVivus;
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 	if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-		
+
     new Vivus(handlerVivus, {
         type: typeVivus,
         duration: durationVivus
@@ -363,18 +371,18 @@ var msie = ua.indexOf("MSIE ");
 		TweenLite.to($(mainTextVivus), 1.3, {fill:"white", strokeWidth:"0.9", delay:0.01});
 		TweenLite.to($(barVivus), 1.3, {fill:"#DC3522", strokeWidth:"0.6", delay:0.01})
     });
-	
+
 	} else {
-		
+
 		new Vivus(handlerVivus, {
         type: typeVivus,
         duration: durationVivus
     }, function() {
         $(mainTextVivus).attr('style', 'fill: rgba(255, 255, 255, 0.8); stroke-width: 0.9px;');
         $(barVivus).attr('style', 'fill: #DC3522; stroke-width: 0.6px;');
-		});   
+		});
 	}
-	
+
 	new Vivus('hexagon', {
         type: 'delayed',
         duration: 160
