@@ -213,9 +213,16 @@ $('.fitness-click').click(function() {
         $('#left-div-handler').fadeOut();
         $('.expand').delay(400).fadeIn();
         $('.page-info').html('<p>Wykorzystane technologie:</p>');
-        $('.page-technology-used').html('<img class="html5 skills" src="img/html5.svg" alt="html5 logo" /> <img class="css3 skills" src="img/css3.svg" alt="css3 logo" /> <img class="js skills" src="img/js.svg" alt="javascript logo" /> <img class="rwd skills" src="img/rwd.svg" alt="resposive web design logo" /> <img class="php skills" src="img/php.svg" alt="php logo" /> <img class="gimp skills" src="img/gimp.svg" alt="gimp logo" /> ');
-        $('.page-info-content').html('<p>Portfolio poświęcone mojej osobie, stack technologiczny głównie taki jak wyżej + zewnętrzne biblioteki. Strona typu SPA.</p>');
-        $('.page-info-share').html('<p>C</p> <p>D</p>');
+        $('.page-technology-used').html('<img class="html5 skills" src="img/html5.svg" alt="html5 logo" /> <img class="css3 skills" src="img/css3.svg" alt="css3 logo" /> <img class="js skills" src="img/js.svg" alt="javascript logo" /> <img class="rwd skills" src="img/rwd.svg" alt="resposive web design logo" /> <img class="php skills" src="img/php.svg" alt="php logo" /> <img class="mysql skills" src="img/mysql.svg" alt="mysql logo" /> <img class="bootstrap skills" src="img/bootstrap.svg" alt="bootstrap logo" />');
+        $('.page-info-content').html('<p>Strona powstała w ramach nauki biblioteki bootstrap. Zawiera w sobie system komentarzy, zliczane są unikalne wejścia w artykuł + zewnętrzne biblioteki.</p>');
+        $('.page-info-share')
+          .html('\
+          <div class="page-preview">\
+            <span class="fa fa-globe fa-2x" aria-label="live preview"></span>\
+              <a href="http://pemiz.com/fitness" target="_blank" rel="noopener noreferrer">live preview</a>\
+            <span class="fa fa-github-alt fa-2x" aria-label="live preview"></span>\
+              <a href="https://github.com/ceboola/fitness-site" target="_blank" rel="noopener noreferrer">source code</a>\
+          </div>');
     });
 });
 };
