@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   background-color: #374140;
   margin: 0;
   padding: 0;
@@ -513,9 +513,9 @@ color:#000
 }
 
 .left-div p {
-    font-size: 0.88vw;
+    font-size: 1vw;
     color: #D9CB9E;
-	margin: 0 auto;
+	  margin: 0 auto;
 }
 
 .work2 img {
@@ -1658,7 +1658,7 @@ span[data-scribe="element:name"] {
 .footer-center span.fa-envelope {
     font-size: 17px;
     line-height: 38px;
-    margin-left: -15px;
+    margin-left: -29px;
 }
 
 .footer-center p{
@@ -1676,7 +1676,7 @@ span[data-scribe="element:name"] {
 }
 
 span.fa.fa-map-marker {
-    margin-left: -32px;
+    margin-left: -42px;
 }
 
 span.fa.fa-phone {
@@ -1686,7 +1686,7 @@ span.fa.fa-phone {
 .footer-center span.fa-github-alt {
     font-size: 20px;
     line-height: 38px;
-    margin-left: -85px;
+    margin-left: -80px;
 }
 
 .center-component {
